@@ -1,0 +1,145 @@
+.menu {
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: $container-offset;
+  background-image: url(../images/menu-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  & .container {
+    padding-top: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 140px;
+    text-align: center;
+    color: #fff;
+    font-size: 54px;
+    font-weight: 400;
+  }
+}
+
+.swiper {
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+
+  &-menu {
+    position: relative; 
+    padding: 0 50px;
+  }
+
+  &-wrapper {
+    display: flex;
+  }
+
+  &-slide-menu {
+    position: relative;
+    padding: 80px 58px 30px;
+    background-color: #fff;
+
+    @media (max-width:768px) {
+      & {
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+    }
+
+    @media (max-width:626px) {
+      & {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+    @media (max-width:560px) {
+      & {
+        padding-left: 75px;
+        padding-right: 75px;
+      }
+    }
+
+    @media (max-width:480px) {
+      & {
+        padding-left: 36px;
+        padding-right: 36px;
+      }
+    }
+
+    &-menu:nth-child(3n):before {
+      content: "RECOMMENDENT";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 7px 12px;
+      font-size: 13px;
+      background-color: $color-title;
+
+    }
+  }
+
+  &-figure {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &-elem {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    padding: 10%;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    background-color: $color-title;
+    font-size: 30px;
+    color: #fff;
+  }
+
+  &-title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  &-subscr {
+    max-width: 180px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &-btn {
+    @extend .btn-reset;
+    @extend .btn;
+    width: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 16px;
+    background-color: $color-title;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  &-button {
+    display: block;
+    padding: 20px;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $color-title;
+
+    &-prev {
+      left: 0px;
+    }
+
+    &-next {
+      right: 0px;
+    }
+  }
+
+}

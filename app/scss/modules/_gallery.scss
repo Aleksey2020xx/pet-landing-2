@@ -1,0 +1,161 @@
+.gallery {
+
+  position: relative;
+  padding-top: 100px;
+  margin-bottom: $offset;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 220px;
+    display: block;
+    width: 30px;
+    height: 100px;
+    background-color: #ff0000;
+  }
+
+  &::before {
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+  }
+
+  & .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__content {
+    @extend .flex;
+
+    @media (max-width: 1228px) {
+      & img {
+        height: 400px;
+        width: 400px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      & img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      & img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      &  {
+        flex-direction: column;
+        align-items: center
+      }
+
+      & img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      & img {
+        height: 280px;
+        width: 280px;
+      }
+    }
+  }
+
+  @media (max-width:560px) {
+    &__left {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__block {
+    @extend .flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__block:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width:560px) {
+      & {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__left-top, &__right-top {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 1228px) {
+    &__left-top, &__right-top {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__left-bottom {
+    @extend .flex;
+
+    @media (max-width:1228px) {
+      & {  
+        flex-direction: column;
+        align-items: center;
+      }
+
+      & img:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__left-bottom img:first-child {
+    margin-right: 30px;
+
+    @media (max-width:1228px) {
+      & {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__right-top {
+    @extend .flex;
+
+    @media (max-width:1228px) {
+      & {  
+        flex-direction: column;
+        align-items: center;
+      }
+
+      & img:first-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__right-top img:first-child {
+    margin-right: 30px;
+
+    @media (max-width:1228px) {
+      & {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include title(60px)
+  }
+}
