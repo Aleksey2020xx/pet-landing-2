@@ -1,0 +1,86 @@
+.inset {
+
+  margin-bottom: $offset;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url("../images/inset-bg.jpg") center / contain repeat fixed;
+
+  @media (max-width:992px) {
+    & {
+      background: url("../images/inset-bg.jpg") center / cover no-repeat fixed;
+    }
+  }
+
+  @media (max-width:560px) {
+    & {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    @extend .flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 605px;
+
+    @media (max-width:992px) {
+      & {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $color-title;
+    font-size: 52px;
+    font-weight: 400;
+
+    @media (max-width:992px) {
+      & {
+        font-size: 42px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width:560px) {
+      & {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__subscr {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+
+    @media (max-width:992px) {
+      & {
+        text-align: center;
+      }
+    }
+
+    @media (max-width:560px) {
+      & {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__btn {
+    @extend .btn;
+    @extend .btn-reset;
+  }
+}

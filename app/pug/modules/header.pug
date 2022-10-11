@@ -1,0 +1,17 @@
+header.header 
+  .container 
+    img.header__logo(src="./images/header-logo.svg")
+    nav.header__nav 
+      ul.header__list
+        each value, key in {'#hero': 'Главная', '#menu': 'меню', '#info': 'о нас', '#contact': 'бронь'}
+          li.header__item 
+            a.header__link(href=key)= value
+        li.header__item 
+          button.header__cart
+      .header__contact 
+        a.header__link-number(href="#") +999-888-76-54
+        p.header__subscription. 
+          Свяжитесь с нами для бронирования  
+      button.header__btn заказ столика
+      a.header__burger(href="#")
+        span 

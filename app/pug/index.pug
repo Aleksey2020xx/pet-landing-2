@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+    link(rel="stylesheet", href="./css/app.min.css")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js") 
+    script(src="./js/script.min.js") 
+  body 
+    .wrapper 
+      div.fullscreen
+        include ./modules/header.pug
+        include ./modules/hero.pug
+      .container 
+        ul.fullscreen__list
+          each value, key in {"Магическая <span>Атмосфера</span>": "В нашем заведении царит магическая атмосфера наполненная вкусными ароматами", "Лучшее качество <span>Еды</span>": "Качество нашей<br>Еды - отменное!", "Недорогая <span>Еда</span>": "Стоимость нашей Еды зависит только от ее количества. Качество всегда на высоте!"}
+            li.fullscreen__item.item 
+              .item__img
+              h3.item__title!= key 
+              p.item__text!= value   
+
+      main.main 
+        include ./modules/prewie.pug
+        include ./modules/inset.pug
+        include ./modules/stend.pug
+        include ./modules/menu.pug
+        include ./modules/comment.pug
+        include ./modules/gallery.pug
+        include ./modules/cooks.pug
+       
+      include ./modules/footer.pug

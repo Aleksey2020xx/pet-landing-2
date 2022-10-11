@@ -1,0 +1,19 @@
+section.menu
+  .container 
+    h2.menu__title. 
+      Наше меню
+    .swiper.swiper-menu 
+      .swiper-wrapper
+        - for (var i = 0; i < 3; i++)
+          .swiper-slide.swiper-slide-menu
+            .swiper-figure 
+              img.swiper-img(src="./images/slide-img.jpg", alt="img")
+              span.swiper-elem 420 
+            h3.swiper-title. 
+              Гамбургер макси
+            p.swiper-subscr. 
+              Максимально толстый слой мяса
+            button.swiper-btn Заказать
+      .swiper-button-prev.swiper-button 
+      .swiper-button-next.swiper-button
+        
